@@ -11,7 +11,7 @@ html,body {
 }
 
 body {
-  background: #2e2a23;
+  background: #398000;
   background-image: -webkit-radial-gradient(20% 40%,cover circle, #3e392f, #221e17);
   background-image: -moz-radial-gradient(20% 40%,contain circle, #3e392f, #221e17);
   background-repeat: no-repeat;
@@ -179,7 +179,7 @@ header {
   right: 20px;
 }
 
-laranja, cereja, pepino, caixa, prato {
+laranja, tomate, pepino, caixa, prato {
   transition: transform ease-out .2s;
 }
 
@@ -250,7 +250,7 @@ prato caixa {
 
 }
 
-prato caixa cereja,
+prato caixa tomate,
 prato caixa laranja {
   top: -36px !important;
 }
@@ -387,7 +387,7 @@ caixa:before {
   font-size: 30px;
 }
 
-cereja {
+tomate {
   background: #e41919;
   border-color: #ab1212;
 }
@@ -397,7 +397,7 @@ laranja {
   border-color: #bd6e07;
 }
 
-laranja,cereja,pepino {
+laranja,tomate,pepino {
   box-shadow: 0px 5px 0px rgba(0,0,0,.2);
   display: inline-block;
   margin: 0 10px;
@@ -423,7 +423,7 @@ carrot {
 }
 
 
-laranja,cereja {
+laranja,tomate {
   -webkit-border-radius: 100px;
   border-radius: 100px;
   border-style: solid;
@@ -435,7 +435,7 @@ laranja,cereja {
 }
 
 laranja.pequeno,
-cereja.pequeno {
+tomate.pequeno {
   height: 30px;
   width: 30px;
   border-width: 2px 4px 8px 4px;
@@ -460,7 +460,7 @@ pepino.pequeno {
   margin: 30px 10px;
 }
 
-laranja:before,cereja:before {
+laranja:before,tomate:before {
   content: "";
   display: block;
   position: absolute;
@@ -475,18 +475,18 @@ laranja:before,cereja:before {
 /*FRUITS ON A PLATTER*/
 
 caixa laranja,
-caixa cereja,
+caixa tomate,
 prato laranja,
-prato cereja
+prato tomate
  {
   left: calc(50% - 30px);
   margin: 0;
   position: absolute;
 }
 
-prato > cereja:last-child,
+prato > tomate:last-child,
 prato > laranja:last-child,
-caixa > cereja:last-child,
+caixa > tomate:last-child,
 caixa > laranja:last-child
 {
   top: calc(50% - 35px);
@@ -613,7 +613,7 @@ prato [data-hovered] {
 }
 
 /*
-cereja[data-hovered="true"] {
+tomate[data-hovered="true"] {
   box-shadow: 0 0 0 6px rgba(228,25,25,.3);
 }
 */
@@ -666,25 +666,26 @@ laranja {
 }
 
 .display-help {
-  font-size: 15px;
+  font-size: 12px;
   margin: 30px auto 0 auto;
   color: rgba(255,255,255,.6);
 }
 
 .display-help .selector-name {
-  font-size: 18px;
+  font-size: 14px;
   margin: 0 0 4px 0 ;
+  color: rgb(255, 230, 0);
 }
 
 .display-help .title {
-  font-size: 18px;
+  font-size: 14px;
   margin: 0 0 15px 0;
   font-weight: 300;
   opacity: .7;
 }
 
 .display-help .syntax {
-  font-size: 24px;
+  font-size: 16px;
   margin: 0;
   padding: 0;
   font-weight: 200;
@@ -701,15 +702,16 @@ laranja {
   line-height: 150%;
 }
 
-.display-help .examples-title {
-  margin: 45px 0 10px 0;
+.display-help .titles {
+  margin: 15px 0 10px 0;
   padding: 0;
+  color:greenyellow;
 }
 
 .display-help .hint,
 .display-help .example {
   color: #888;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .display-help .example {
@@ -724,11 +726,11 @@ laranja {
 
 .display-help strong,
 .display-help tag {
-  color: #AAA;
+  color: #fff;
   background: rgba(255,255,255,.1);
   padding: 3px 6px 3px 6px;
   margin: 0px 2px;
-  font-size: 13px;
+  font-size: 12px;
   font-family: menlo,monospace;
   font-weight: normal;
 }
@@ -773,30 +775,30 @@ board {
 
 /* chique laranja stacking */
 
-prato cereja,
+prato tomate,
 prato laranja {
   position: absolute;
 }
 
-prato cereja:last-child,
+prato tomate:last-child,
 prato laranja:last-child {
   z-index: 300;
 }
 
-prato cereja:nth-last-child(2),
+prato tomate:nth-last-child(2),
 prato laranja:nth-last-child(2) {
   top: -25px;
   z-index: 400;
 }
 
-prato cereja:nth-last-child(3),
+prato tomate:nth-last-child(3),
 prato laranja:nth-last-child(3)
 {
   top: -65px;
   z-index: 500;
 }
 
-prato cereja:nth-last-child(4),
+prato tomate:nth-last-child(4),
 prato laranja:nth-last-child(4)
 {
   top: -105px;
@@ -886,7 +888,7 @@ prato laranja:nth-last-child(4)
 }
 
 .order {
-  color: rgba(255,255,255,.3);
+  color: rgb(251, 255, 0);
   font-size: 45px;
   margin: 0;
   font-weight: 400;
@@ -902,7 +904,8 @@ prato laranja:nth-last-child(4)
   text-align: center;
   margin-top: 35px;
   padding: 20px 0;
-  width: 725px;
+  w-idth: 725px;
+  width: 100%;
   color: rgba(255,255,255,.3);
   font-size: 15px;
   margin: 0 auto;
@@ -949,6 +952,7 @@ prato laranja:nth-last-child(4)
   width: calc(100% - 375px);
   text-align: center;
   overflow-x: visible;
+  overflow-y: hidden;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -962,7 +966,7 @@ prato laranja:nth-last-child(4)
   position: fixed;
   width: 375px;
   right: 0;
-/*  overflow: auto;*/
+  o-verflow-x: visible;
   top: 40px;
   top: 0;
   bottom: 0;
