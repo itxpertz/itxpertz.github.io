@@ -34,11 +34,11 @@ $(document).ready(function(){
     var type = $(this).attr("type");
 
     if(type == "twitter"){
-      var url = "https://twitter.com/intent/tweet?text=Learning%20CSS?%20Try%20CSS%20Diner,%20the%20fun%20way%20to%20practice%20selectors%20%E2%86%92&hashtags=css,cssdiner,webdev&url=http%3A%2F%2Fcssdiner.com%2F&via=flukeout";
+      var url = "https://twitter.com/intent/tweet?text=Aprendendo%20seletores%20CSS%20em%20portugues?%20Veja%20essa%20ferramenta:%20CSS%20Diner&hashtags=css,cssdiner,webdev&url=http%3A%2F%2Fitxpertz.github.io%2Fcss-diner-ptbr%2F&via=itxpertzbr";
     } else if (type == "facebook") {
-      var url = "https://www.facebook.com/sharer.php?src=sp&u=http%3A%2F%2Fcssdiner.com";
+      var url = "https://www.facebook.com/sharer.php?src=sp&u=http%3A%2F%2Fitxpertz.github.io%2Fcss-diner-ptbr%2F";
     } else if (type == "email") {
-      var url = "mailto:?subject=Check+out+CSS+Diner&body=It's+a+fun+game+to+learn+%26+practice+CSS+selectors.%0D%0A%0D%0AYou+can+try+it+at+http://cssdiner.com";
+      var url = "mailto:?subject=Veja+essa+ferramenta+CSS+Diner&body=E'+um+jogo+para+aprender+seletores+CSS.%0D%0A%0D%0AVoce+pode+testar+em+at+http://itxpertz.github.io/css-diner-ptbr";
     }
 
     PopupCenter(url, "title", 600, 450);

@@ -111,7 +111,7 @@ var levels = [
   {
     doThis : "Selecione as pequenas laranjas",
     selector : "laranja.pequeno",
-    helpTitle: "Combinando o seletor de Classe",
+    helpTitle: "Combinando o seletor de Classe com Seletores de Tipo",
     syntax: "A.className",
     help : 'Você pode combinar o seletor de classe com outros seletores, como o seletor de tipo/tag por exemplo.',
     examples : [
@@ -159,7 +159,7 @@ var levels = [
     selectorName : "Operador de Combinação (Virgula)",
     helpTitle: "Combine seletores com virgulas!",
     syntax : "A, B",
-    help : 'Amvirgula permite combinar e selecionar ambos elementos <strong>A</strong> e <strong>B</strong>. Você pode combinar qualquer seletor dessa forma e pode especificar mais do que dois inclusive.',
+    help : 'A virgula permite combinar e selecionar ambos elementos <strong>A</strong> e <strong>B</strong>. Você pode combinar qualquer seletor dessa forma e pode especificar mais do que dois inclusive.',
     examples: [
     '<strong>p, .legal</strong> seleciona todos os elementos <tag>p</tag> e também todos elementos com <strong>class="legal"</strong>',
     '<strong>a, p, div</strong> seleciona todos elementos <tag>a</tag>, <tag>p</tag> e <tag>div</tag>'
@@ -181,14 +181,14 @@ var levels = [
     `
   },
   {
-    doThis : "Selecione todas as coisas!",
+    doThis : "Selecione tudo!",
     selector : "*",
     selectorName:  "O seletor universal (*)",
     helpTitle: "Você pode selecionar tudo!",
     syntax : "*",
-    help : 'Você pode selecionar todos os elementos com o seletor universal!',
+    help : 'Com <strong>*</strong> você pode selecionar todos os elementos (seletor universal)!',
     examples : [
-      '<strong>p *</strong> selecione todos elemntos dento de todas os elementos <tag>p</tag>.',
+      '<strong>p *</strong> selecione todos elemntos que estiverem dentro de elementos <tag>p</tag>.',
     ],
     boardMarkup : `
     <cereja/>
@@ -203,14 +203,14 @@ var levels = [
     `
   },
   {
-    doThis : "Select everything on o prato",
+    doThis : "Selecione tudo dentro de pratos",
     selector : "prato *",
     syntax : "A&nbsp;&nbsp;*",
-    helpTitle: "Combine the Universal Selector",
-    help : 'This selects all elements inside of <strong>A</strong>.',
+    helpTitle: "Combine com o seletor universal",
+    help : 'Esta regra acima seleciona tudo dentro de um elemento <strong>A</strong>.',
     examples : [
-      '<strong>p *</strong> selects every element inside all <tag>p</tag> elements.',
-      '<strong>ul.chique *</strong> selects every element inside all <tag>ul class="chique"</tag> elements.'
+      '<strong>p *</strong> seleciona todos elementos dentro de elementos<tag>p</tag>.',
+      '<strong>ul.chique *</strong> seleciona todos elemento dentro de elementos com a classe <tag>ul class="chique"</tag>.'
     ],
     boardMarkup: `
     <prato id="chique">
@@ -225,15 +225,15 @@ var levels = [
     </prato>`
   },
   {
-    doThis : "Select every cereja that's next to o prato",
+    doThis : "Selecione toda cereja que estiver ao lado de um prato",
     selector : "prato + cereja",
-    helpTitle: "Select an element that directly follows another element",
-    selectorName: "Adjacent Sibling Selector",
+    helpTitle: "Seleciona um elemento que está diretamente após um elemento",
+    selectorName: "Seletor de Irmão Adjacente",
     syntax : "A + B",
-    help : "This selects all <strong>B</strong> elements that directly follow <strong>A</strong>. Elements that follow one another are called siblings. They're no same level, or depth. <br/><br/>In the HTML markup for this level, elements that have the same indentation are siblings.",
+    help : "Esta regra acima seleciona todos elementos <strong>B</strong>que sucedem elementos <strong>A</strong>. Elementos que sucedem outros são chamados de irmãos (siblings).",
     examples : [
-      '<strong>p + .intro</strong> selects every element with <strong>class="intro"</strong> that directly follows a <tag>p</tag>',
-      '<strong>div + a</strong> selects every <tag>a</tag> element that directly follows a <tag>div</tag>'
+      '<strong>p + .intro</strong> seleciona todos elementos com <strong>class="intro"</strong> que está diretamente após um elemento <tag>p</tag>',
+      '<strong>div + a</strong> seleciona todos elementos <tag>a</tag> que estádiretamente após uma <tag>div</tag>'
     ],
     boardMarkup : `
     <caixa>

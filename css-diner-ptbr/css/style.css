@@ -27,10 +27,21 @@ h1, h2, h3, h4, h5 {
 }
 
 header {
+ 
   padding: 12px 15px 11px 35px;
   color: rgba(255,255,255,.3);
   text-align: left;
 }
+
+.flag {
+  border:1px solid black;
+  padding:0px;
+  width: 20px;
+  height: 20px;
+  margin-left:5px;
+  background-image: url(../images/icon-flag.png);
+  background-size: contain;
+} 
 
 .share-menu {
   float: right;
@@ -71,6 +82,7 @@ header {
 .share-menu .share-email {
   background-image: url(../images/icon-email.svg);
 }
+
 
 .share-menu a:hover {
   color: rgba(255,255,255,.5);
