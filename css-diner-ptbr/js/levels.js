@@ -1,16 +1,16 @@
 var levels = [
   {
     order: 1,
-    helpTitle : "Selecionando elementos pelo seu tipo",
-    selectorName : "Seletor de tipo ou tag",
     doThis : "Selecione os pratos",
-    selector : "prato",
+    selectorName : "Seletor de tipo ou tag",
+    helpTitle : "Selecionando elementos pelo seu tipo",
     syntax : "A",
     help : "Seleciona todos os elementos do tipo <strong>A</strong>. <br/><br/>'Tipo' se refere ao tipo de TAG, então <tag>div</tag>, <tag>p</tag> e <tag>ul</tag> são exemplos de tipos diferentes.",
     examples : [
       '<strong>div</strong> seleciona todos os elementos <tag>div</tag>',
       '<strong>p</strong> seleciona todos elementos <tag>p</tag>',
     ],
+    selector : "prato",
     boardMarkup: `
     <prato/>
     <prato/>
@@ -19,15 +19,15 @@ var levels = [
   {
     order: 2,
     doThis : "Seleciona as caixas",
-    selector : "caixa",
-    syntax : "A",
-    helpTitle : "Seleciona os elementos pelo seu tipo",
     selectorName : "Seletor de tipo ou tag",
+    helpTitle : "Seleciona os elementos pelo seu tipo",
+    syntax : "A",
     help : "Seleciona todos os elementos do tipo <strong>A</strong>. 'Tipo' se refere ao tipo de TAG, então <tag>div</tag>, <tag>p</tag> e <tag>ul</tag> são exemplos de tipos diferentes.",
     examples : [
       '<strong>div</strong> seleciona todos os elementos <tag>div</tag>',
       '<strong>p</strong> seleciona todos elementos <tag>p</tag>',
     ],
+    selector : "caixa",
     boardMarkup: `
     <caixa/>
     <prato/>
@@ -37,7 +37,6 @@ var levels = [
   {
     order: 3,
     doThis : "Selecione o prato chique",
-    selector : "#chique",
     selectorName: "Seletor de ID",
     helpTitle: "Seleciona elementos pelo seu ID",
     syntax: "#id",
@@ -46,6 +45,7 @@ var levels = [
       '<strong>#legal</strong> seleciona qualquer elemento com <strong>id="legal"</strong>',
       '<strong>ul#longo</strong> seleciona <tag>ul id="longo"</tag>'
     ],
+    selector : "#chique",
     boardMarkup : `
     <prato id="chique"/>
     <prato/>
@@ -54,16 +54,16 @@ var levels = [
   },
   {
     order: 4, 
-    helpTitle: "Seleciona um elemento dentro de outro elemento",
-    selectorName : "Seletor de descendência (filho)",
     doThis : "Selecione o tomate no prato",
-    selector : "prato tomate",
+    selectorName : "Seletor de filhos (descendentes)",
+    helpTitle: "Seleciona um elemento dentro de outro elemento",
     syntax: "A&nbsp;&nbsp;B",
     help : "Seleciona todos <strong>B</strong> dentro de <strong>A</strong>. <br/> <strong>B</strong> é chamado de descendente (ou filho) porque está dentro de outro elemento.",
     examples : [
       '<strong>p&nbsp;&nbsp;strong</strong> seleciona todos elementos <tag>strong</tag> que estão dentro de qualquer elemento <tag>p</tag>',
       '<strong>#chique&nbsp;&nbsp;span</strong> seleciona qualquer elemento <tag>span</tag> que estão dentro do elemento com <strong>id="chique"</strong>',
     ],
+    selector : "prato tomate",
     boardMarkup : `
     <caixa/>
     <prato>
@@ -73,8 +73,9 @@ var levels = [
     `
   },
   {
+    order: 5,  
     doThis : "Selecione o pepino no prato chique",
-    selector : "#chique pepino",
+    selectorName: "Combinação de seletores (parte 1)",
     helpTitle: "Combinando os seletores de ID e descendente",
     syntax: "#id&nbsp;&nbsp;A",
     help : 'Você pode combinar qualquer seletor com o seletor de descendência.',
@@ -82,6 +83,7 @@ var levels = [
       '<strong>#legal&nbsp;span</strong> seleciona todos elementos <tag>span</tag> que estão dentro de elemntos com <strong>id="legal"</strong>',
       '<strong>#chique&nbsp;&nbsp;span</strong> seleciona qualquer elemento <tag>span</tag> que estão dentro do elemento com <strong>id="chique"</strong>',
     ],
+    selector : "#chique pepino",
     boardMarkup : `
     <caixa>
     <laranja/>
@@ -95,15 +97,16 @@ var levels = [
     `
   },
   {
+    order: 6,   
     doThis : "Selecione os pequenos tomates",
-    selector : ".pequeno",
     selectorName: "Seletor de Classe",
     helpTitle: "Seleciona elementos pela sua classe",
     syntax: ".nomeDaClasse",
     help : 'O seletor de classe pega todos os elementos que contenham aquela classe. Elementos somente podem ter um ID, mas podem ter muitas classes.',
     examples : [
-    '<strong>.grande</strong> seleciona todos os elementos com <strong>class="grande"</strong>'
+      '<strong>.grande</strong> seleciona todos os elementos com <strong>class="grande"</strong>'
     ],
+    selector : ".pequeno",
     boardMarkup : `
     <tomate/>
     <tomate class="pequeno"/>
@@ -114,8 +117,9 @@ var levels = [
     `
   },
   {
+    order: 7,   
     doThis : "Selecione as pequenas laranjas",
-    selector : "laranja.pequeno",
+    selectorName: "Combinação de seletores (parte 2)",
     helpTitle: "Combinando o seletor de Classe com Seletores de Tipo",
     syntax: "A.className",
     help : 'Você pode combinar o seletor de classe com outros seletores, como o seletor de tipo/tag por exemplo.',
@@ -123,6 +127,7 @@ var levels = [
       '<strong>ul.importante</strong> seleciona todos elementos <tag>ul</tag>que contenham <strong>class="importante"</strong>',
       '<strong>#topo.grande</strong> seleciona todos os elementos com <strong>id="topo"</strong> que também tem <strong>class="grande"</strong>'
     ],
+    selector : "laranja.pequeno",
     boardMarkup :`
     <tomate/>
     <tomate class="pequeno"/>
@@ -137,11 +142,12 @@ var levels = [
     </prato>`
   },
   {
+    order: 8,
     doThis : "Selecione as pequenas laranjas dentro das caixas",
-    selector : "caixa laranja.pequeno",
     syntax: "Teste seus conhecimentos!",
     helpTitle: "Você consegue...",
     help : 'Combine o que você aprendeu nos últimos níveis para resolver esse!',
+    selector : "caixa laranja.pequeno",
     boardMarkup : `
     <caixa>
       <laranja/>
@@ -159,16 +165,17 @@ var levels = [
     `
   },
   {
+    order: 9,
     doThis : "Selecione todos os pratos e caixas",
-    selector : "prato,caixa",
     selectorName : "Operador de Combinação (Virgula)",
     helpTitle: "Combine seletores com virgulas!",
     syntax : "A, B",
     help : 'A virgula permite combinar e selecionar ambos elementos <strong>A</strong> e <strong>B</strong>. Você pode combinar qualquer seletor dessa forma e pode especificar mais do que dois inclusive.',
     examples: [
-    '<strong>p, .legal</strong> seleciona todos os elementos <tag>p</tag> e também todos elementos com <strong>class="legal"</strong>',
-    '<strong>a, p, div</strong> seleciona todos elementos <tag>a</tag>, <tag>p</tag> e <tag>div</tag>'
+      '<strong>p, .legal</strong> seleciona todos os elementos <tag>p</tag> e também todos elementos com <strong>class="legal"</strong>',
+      '<strong>a, p, div</strong> seleciona todos elementos <tag>a</tag>, <tag>p</tag> e <tag>div</tag>'
     ],
+    selector : "prato,caixa",
     boardMarkup : `
     <pepino class="pequeno"/>
     <pepino/>
@@ -186,8 +193,8 @@ var levels = [
     `
   },
   {
+    order: 10, 
     doThis : "Selecione tudo!",
-    selector : "*",
     selectorName:  "O seletor universal (*)",
     helpTitle: "Você pode selecionar tudo!",
     syntax : "*",
@@ -195,6 +202,7 @@ var levels = [
     examples : [
       '<strong>p *</strong> selecione todos elemntos que estiverem dentro de elementos <tag>p</tag>.',
     ],
+    selector : "*",
     boardMarkup : `
     <tomate/>
     <prato>
@@ -208,15 +216,17 @@ var levels = [
     `
   },
   {
+    order: 11,
     doThis : "Selecione tudo dentro de pratos",
-    selector : "prato *",
+    selectorName: "Combinação de seletores (parte 3)",
     syntax : "A&nbsp;&nbsp;*",
-    helpTitle: "Combine com o seletor universal",
+    helpTitle: "Combinando outro seletor com o seletor universal",
     help : 'Esta regra acima seleciona tudo dentro de um elemento <strong>A</strong>.',
     examples : [
       '<strong>p *</strong> seleciona todos elementos dentro de elementos<tag>p</tag>.',
       '<strong>ul.chique *</strong> seleciona todos elemento dentro de elementos com a classe <tag>ul class="chique"</tag>.'
     ],
+    selector : "prato *",
     boardMarkup: `
     <prato id="chique">
       <laranja class="pequeno"/>
@@ -230,16 +240,17 @@ var levels = [
     </prato>`
   },
   {
+    order: 12,
     doThis : "Selecione todo tomate que estiver ao lado de um prato",
-    selector : "prato + tomate",
+    selectorName: "Seletor de Irmão do Lado (Adjacente)",
     helpTitle: "Seleciona um elemento que está diretamente após um elemento",
-    selectorName: "Seletor de Irmão Adjacente",
     syntax : "A + B",
     help : "Esta regra acima seleciona todos elementos <strong>B</strong>que sucedem elementos <strong>A</strong>. Elementos que sucedem outros são chamados de irmãos (siblings).",
     examples : [
       '<strong>p + .intro</strong> seleciona todos elementos com <strong>class="intro"</strong> que está diretamente após um elemento <tag>p</tag>',
       '<strong>div + a</strong> seleciona todos elementos <tag>a</tag> que estádiretamente após uma <tag>div</tag>'
     ],
+    selector : "prato + tomate",
     boardMarkup : `
     <caixa>
       <tomate class="pequeno"/>
@@ -253,15 +264,16 @@ var levels = [
     `
   },
   {
-    selectorName: "General Sibling Selector",
-    helpTitle: "Select elements that follows another element",
-    syntax: "A ~ B",
+    order: 13,
     doThis : "Selecione os pepinos ao lado da caixa",
-    selector : "caixa ~ pepino",
-    help : "You can select all siblings of an element that follow it. This is like the Adjacent Selector (A + B) except it gets all of the following elements instead of one.",
+    selectorName: "Seletor de irmãos seguidores (General Sibling)",
+    helpTitle: "Seleciona elementos que de um tipo que aparecem no mesmo nível, porém após um outro elemento",
+    syntax: "A ~ B",
+    help : "Você pode selecionar todos os irmãos que são adjacentes a um elemento. É semelhante ao seletor adjacente <strong>A + B</strong>, exceto que pega TODOS os próximos elementos, não apenas o próximo.",
     examples : [
-      '<strong>A ~ B</strong> selects all <strong>B</strong> that follow a <strong>A</strong>'
+      '<strong>A ~ B</strong> seleciona todos os elementos <strong>B</strong> que seguem um elemento <strong>A</strong>'
     ],
+    selector : "caixa ~ pepino",
     boardMarkup : `
     <pepino/>
     <caixa>
@@ -272,21 +284,23 @@ var levels = [
     <prato>
       <pepino/>
     </prato>
+    <pepino/>
     <prato>
       <pepino class="pequeno"/>
     </prato>
     `
   },
   {
-    selectorName: "Child Selector",
-    syntax: "A > B&nbsp;",
+    order: 14,
     doThis : "Selecione o tomate dentro do prato",
-    selector : "prato > tomate",
-    helpTitle: "Select direct children of an element",
-    help : "You can select elements that are direct children of other elements. A child element is any element that is nested directly in another element. <br><br>Elements that are nested deeper than that are called descendant elements.",
+    selectorName: "Seletor de filhos",
+    helpTitle: "Seleciona os filhos de um elemento que são de um determinado tipo",
+    syntax: "A > B&nbsp;",
+    help : "Você pode selecionar elementos que são filhos diretos de outro elemento. Um elemento filho é um elemento que está dentro de outro. <br><br>Elementos que estão em um nivel ainda maior dentro do elemento são c hamados de descendentes.",
     examples : [
       '<strong>A > B</strong> selects all <strong>B</strong> that are a direct children <strong>A</strong>'
     ],
+    selector : "prato > tomate",
     boardMarkup: `
     <prato>
       <caixa>
@@ -302,18 +316,46 @@ var levels = [
     `
   },
   {
-    selectorName: "First Child Pseudo-selector",
-    helpTitle: "Select a first child element inside of another element",
-    doThis : "Selecione a laranja no topo",
-    selector : "prato :first-child",
-    syntax: ":first-child",
-
-    help : "You can Selecione a first child element. A child element is any element that is directly nested in another element. You can combine this pseudo-selector with other selectors.",
+    order: 15,
+    doThis : "Repita a atividade anterior e veja que funciona para mais de um filho",
+    selectorName: "Seletor de filhos (2)",
+    helpTitle: "Seleciona todos os filhos de um elemento que são de um determinado tipo",
+    syntax: "A > B&nbsp;",
+    help : "Veja que o mesmo seletor atua sobre todos os filhos de um mesmo tipo que estejam dentro de outro elemento.",
     examples : [
-      '<strong>:first-child</strong> selects all first child elements.',
-      '<strong>p:first-child</strong> selects all first child <tag>p</tag> elements.',
-      '<strong>div p:first-child</strong> selects all first child <tag>p</tag> elements that are in a <tag>div</tag>.'
+      '<strong>A > B</strong> selects all <strong>B</strong> that are a direct children <strong>A</strong>'
     ],
+    selector : "prato > tomate",
+    boardMarkup: `
+    <prato>
+      <caixa>
+        <tomate/>
+      </caixa>
+    </prato>
+    <prato>
+      <tomate/>
+      <laranja/>
+      <tomate/>
+    </prato>
+    <prato/>
+    <tomate/>
+    <tomate class="pequeno"/>
+    `
+  },
+  {
+    order: 16, 
+    doThis : "Selecione a laranja no topo",
+    selectorName: "Pseudo seletor de primeiro filho",
+    helpTitle: "Seleciona a primeira ocorrência (primeiro filho) dentro de outro elemento",
+    syntax: ":first-child",
+    
+    help : "É possível selecionar somente o primeiro filho de um elemento usando esse pseudo-seletor. Você pode combinar esse pseudo-seletor com outros seletores.",
+    examples : [
+      '<strong>:first-child</strong> seleciona todos os primeiros filhos.',
+      '<strong>p:first-child</strong> seleciona todos os primeiros filhos que são elementos <tag>p</tag>.',
+      '<strong>div p:first-child</strong> seleciona todos os primeiros filhos  <tag>p</tag> que estão dentro de elementos <tag>div</tag>.'
+    ],
+    selector : "prato :first-child",
     boardMarkup :`
     <caixa/>
     <prato />
@@ -326,16 +368,18 @@ var levels = [
     `
   },
   {
-    selectorName: "Only Child Pseudo-selector",
-    helpTitle: "Select an element that are the only element inside of another one.",
-    doThis : "Selecione o tomate e o pepino nos pratos",
-    selector : "prato :only-child",
+    order: 17,  
+    doThis : "Selecione todos os itens filhos que são únicos (sem irmãos)",
+    selectorName: "Pseudo-selector para filhos únicos",
+    helpTitle: "Seleciona um elementos que são filhos únicos dentro de um outro elemento, isto é, que não tem irmãos.",
     syntax: ":only-child",
-    help : "You can select any element that is the only element inside of another one.",
+    help : "Com ele você pode selecionar qualquer elemento que for o único dentro de outro elemento.",
     examples : [
-      '<strong>span:only-child</strong> selects the <tag>span</tag> elements that are the only child of some other element.',
-      '<strong>ul li:only-child</strong> selects the only <tag>li</tag> element that are in a <tag>ul</tag>.'
+      '<strong>:only-child</strong> seleciona todos os elementos que são filhos únicos dentro de outros elementos.',
+      '<strong>span:only-child</strong> seleciona os elementos <tag>span</tag> que são únicos dentro de outros elementos.',
+      '<strong>ul li:only-child</strong> seleciona somente elementos <tag>li</tag> que são estão sozinhos dentro do elemento<tag>ul</tag>.'
     ],
+    selector : ":only-child",
     boardMarkup : `
     <prato>
       <tomate/>
@@ -354,17 +398,78 @@ var levels = [
     `
   },
   {
-    selectorName: "Last Child Pseudo-selector",
-    helpTitle: "Selecione a last element inside of another element",
-    doThis : "Selecione os pequenos tomate e pepino",
-    selector : ".pequeno:last-child",
+    order: 18,  
+    doThis : "Selecione somente os pepinos que estão sozinhos nos pratos",
+    selectorName: "Pseudo-selector para filhos únicos (2)",
+    helpTitle: "Seleciona um elementos que são filhos únicos dentro de um outro elemento, isto é, que não tem irmãos.",
+    syntax: ":only-child",
+    help : "Com ele você pode selecionar qualquer elemento que for o único dentro de outro elemento.",
+    examples : [
+      '<strong>:only-child</strong> seleciona todos os elementos que são filhos únicos dentro de outros elementos.',
+      '<strong>span:only-child</strong> seleciona os elementos <tag>span</tag> que são únicos dentro de outros elementos.',
+      '<strong>ul li:only-child</strong> seleciona somente elementos <tag>li</tag> que são estão sozinhos dentro do elemento<tag>ul</tag>.'
+    ],
+    selector : "pepino:only-child",
+    boardMarkup : `
+    <prato>
+      <tomate/>
+    </prato>
+    <prato>
+      <pepino />
+    </prato>
+    <caixa>
+      <pepino />
+    </caixa>
+    <prato>
+      <laranja class="pequeno"/>
+      <laranja/>
+    </prato>
+    <pepino class="pequeno"/>
+    `
+  },
+  {
+    order: 19,  
+    doThis : "Selecione o tomate e o pepino nos pratos",
+    selectorName: "Pseudo-selector para filhos únicos (3)",
+    helpTitle: "Seleciona um elementos que são filhos únicos dentro de um outro elemento, isto é, que não tem irmãos.",
+    syntax: ":only-child",
+    help : "Com ele você pode selecionar qualquer elemento que for o único dentro de outro elemento.",
+    examples : [
+      '<strong>:only-child</strong> seleciona todos os elementos que são filhos únicos dentro de outros elementos.',
+      '<strong>span:only-child</strong> seleciona os elementos <tag>span</tag> que são únicos dentro de outros elementos.',
+      '<strong>ul li:only-child</strong> seleciona somente elementos <tag>li</tag> que são estão sozinhos dentro do elemento<tag>ul</tag>.'
+    ],
+    selector : "prato :only-child",
+    boardMarkup : `
+    <prato>
+      <tomate/>
+    </prato>
+    <prato>
+      <pepino />
+    </prato>
+    <caixa>
+      <pepino />
+    </caixa>
+    <prato>
+      <laranja class="pequeno"/>
+      <laranja/>
+    </prato>
+    <pepino class="pequeno"/>
+    `
+  },
+  {
+    order: 20,  
+    doThis : "Selecione todos os últimos filhos",
+    selectorName: "Pseudo-selector de último filho",
+    helpTitle: "Seleciona os últimos filhos dentro de qualquer outro elemento",
     syntax: ":last-child",
-    help : "You can use this selector to select an element that is the last child element inside of another element. <br><br>Pro Tip &rarr; In cases where there is only one element, that element counts as the first-child, only-child and last-child!",
+    help : "Usamos esse seletor para pegar um elemento que é o último dentrode outro elemento. <br><br><strong>Pro Tip &rarr;</strong> Nos casos onde só existe um único elemento, este será o <strong>:first-child</strong>, <strong>:last-child</strong> e <strong>:only-child</strong> ao mesmo tempo!",
     examples : [
       '<strong>:last-child</strong> selects all last-child elements.',
       '<strong>span:last-child</strong> selects all last-child <tag>span</tag> elements.',
       '<strong>ul li:last-child</strong> selects the last <tag>li</tag> elements inside of any <tag>ul</tag>.'
     ],
+    selector : ":last-child",
     boardMarkup : `
     <prato id="chique">
       <tomate class="pequeno"/>
@@ -377,21 +482,108 @@ var levels = [
     <pepino class="pequeno"/>`
   },
   {
-    selectorName: "Nth Child Pseudo-selector",
-    helpTitle: "Select an element by its order in another element",
-    doThis : "Selecione a 3º prato",
-    selector : ":nth-child(3)",
-    syntax: ":nth-child(A)",
-    help : "Selects the <strong>nth</strong> (Ex: 1st, 3rd, 12th etc.) child element in another element.",
+    order: 21,  
+    doThis : "Selecione o tomate e o pepino pequenos",
+    selectorName: "Pseudo-selector de último filho (2)",
+    helpTitle: "Combinando classes com o seletor de último filho",
+    syntax: ".nomeClasse:last-child",
+    help : "Usamos esse seletor para pegar um elemento que é o último dentrode outro elemento. <br><br><strong>Pro Tip &rarr;</strong> Nos casos onde só existe um único elemento, este será o <strong>:first-child</strong>, <strong>:last-child</strong> e <strong>:only-child</strong> ao mesmo tempo!",
     examples : [
-      '<strong>:nth-child(8)</strong> selects every element that is the 8th child of another element.',
-      '<strong>div p:nth-child(2)</strong> selects the second <strong>p</strong> in every <strong>div</strong>',
+      '<strong>.novo:last-child</strong> seleciona o último filho de todos os itens que tem a classe <strong>novo</strong> aplicada.',
+
     ],
+    selector : ".pequeno:last-child",
+    boardMarkup : `
+    <prato id="chique">
+      <tomate class="pequeno"/>
+    </prato>
+    <prato/>
+    <prato>
+      <laranja class="pequeno"/>
+      <laranja>
+    </prato>
+    <pepino class="pequeno"/>`
+  },
+  {
+    order: 22,  
+    doThis : "Selecione o 3º prato",
+    selectorName: "Pseudo-seletor de N-ésimo Filho",
+    helpTitle: "Seleciona um elemento pela sua ordem em outro elemento",
+    syntax: ":nth-child(Número)",
+    help : "Seleciona o elemento filho com a posição <strong>Número</strong> (Ex: 1º, 2º, 3º, 12º etc.).",
+    examples : [
+      '<strong>:nth-child(8)</strong> seleciona todos os elementos que são filhos que estiverem na 8ª posição.',
+      '<strong>div :nth-child(3)</strong> seleciona todos os 3ºs filhos de elementos <strong>div</strong>',
+      '<strong>p:nth-child(2)</strong> seleciona os 2º <strong>p</strong> que são filhos de <strong>div</strong>',
+      '<strong>div p:nth-child(2)</strong> seleciona os 2º <strong>p</strong> que são filhos de <strong>div</strong>',
+    ],
+    selector : ":nth-child(3)",
     boardMarkup : `
     <prato/>
     <prato/>
     <prato/>
     <prato id="chique"/>
+    `
+  },
+  {
+    order: 23,  
+    doThis : "Selecione o 2º item de cada prato",
+    selectorName: "Pseudo-seletor de N-ésimo Filho",
+    helpTitle: "Seleciona um elemento pela sua ordem em outro elemento",
+    syntax: "A&nbsp;&nbsp;:nth-child(Número)",
+    help : "Seleciona o elemento filho com a posição <strong>Número</strong> (Ex: 1º, 2º, 3º, 12º etc.).",
+    examples : [
+      '<strong>:nth-child(8)</strong> seleciona todos os elementos que são filhos que estiverem na 8ª posição.',
+      '<strong>div :nth-child(3)</strong> seleciona todos os 3ºs filhos de elementos <strong>div</strong>',
+      '<strong>p:nth-child(2)</strong> seleciona os 2º <strong>p</strong> que são filhos de <strong>div</strong>',
+      '<strong>div p:nth-child(2)</strong> seleciona os 2º <strong>p</strong> que são filhos de <strong>div</strong>',
+    ],
+    selector : "prato :nth-child(2)",
+    boardMarkup : `
+    <prato/>
+    <prato>
+      <laranja/>
+      <laranja/>
+      <laranja/>
+    </prato>
+    <prato/>
+    <prato id="chique">
+      <tomate/>
+      <tomate/>
+      <tomate/>
+    </prato>
+    `
+  },
+  {
+    order: 24,  
+    doThis : "Selecione somente o 3º tomate",
+    selectorName: "Pseudo-seletor de N-ésimo Filho",
+    helpTitle: "Seleciona um elemento pela sua ordem em outro elemento",
+    syntax: "A B:nth-child(Número)",
+    help : "Seleciona o elemento filho com a posição <strong>Número</strong> (Ex: 1º, 2º, 3º, 12º etc.).",
+    examples : [
+      '<strong>:nth-child(8)</strong> seleciona todos os elementos que são filhos que estiverem na 8ª posição.',
+      '<strong>div :nth-child(3)</strong> seleciona todos os 3ºs filhos de elementos <strong>div</strong>',
+      '<strong>p:nth-child(2)</strong> seleciona os 2º <strong>p</strong> que são filhos de <strong>div</strong>',
+      '<strong>div p:nth-child(2)</strong> seleciona os 2º <strong>p</strong> que são filhos de <strong>div</strong>',
+    ],
+    selector : "prato tomate:nth-child(3)",
+    boardMarkup : `
+    <prato>
+      <tomate/>
+      <tomate/>
+    </prato>
+    <prato>
+      <laranja/>
+      <laranja/>
+      <laranja/>
+    </prato>
+    <prato/>
+    <prato>
+      <tomate/>
+      <tomate/>
+      <tomate/>
+    </prato>
     `
   },
   {

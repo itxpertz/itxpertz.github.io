@@ -53,7 +53,7 @@ $(document).ready(function(){
   });
 
   // Custom scrollbar plugin
-  $(".left-col, .level-menu").mCustomScrollbar({
+  $(".left-col, .level-menu, .right-col").mCustomScrollbar({
     scrollInertia: 0,
     autoHideScrollbar: true
   });
@@ -630,7 +630,7 @@ function loadLevel(){
   loadBoard();
   resetTable();
 
-  $(".level-header .level-text").html("Level " + (currentLevel+1) + " of " + levels.length);
+  $(".level-header .level-text").html("Nível " + (currentLevel+1) + " de " + levels.length);
 
   updateProgressUI(currentLevel, checkCompleted(currentLevel));
 
