@@ -34,11 +34,12 @@ $(document).ready(function(){
     var type = $(this).attr("type");
 
     if(type == "twitter"){
-      var url = "https://twitter.com/intent/tweet?text=Aprendendo%20seletores%20CSS%20em%20portugues?%20Veja%20essa%20ferramenta:%20CSS%20Diner&hashtags=css,cssdiner,webdev&url=http%3A%2F%2Fitxpertz.github.io%2Fcss-diner-ptbr%2F&via=itxpertzbr";
+      var url = "https://twitter.com/intent/tweet?text=Aprendendo%20seletores%20CSS%20em%20portugues?%20Veja%20essa%20ferramenta:%20Restaurante%20CSS%20&hashtags=css,cssdiner,webdev&url=http%3A%2F%2Fitxpertz.github.io%2Fcss-diner-ptbr%2F&via=itxpertzbr";
     } else if (type == "facebook") {
-      var url = "https://www.facebook.com/sharer.php?src=sp&u=http%3A%2F%2Fitxpertz.github.io%2Fcss-diner-ptbr%2F";
+      //var url = "https://www.facebook.com/sharer.php?src=sp&u=http%3A%2F%2Fitxpertz.github.io%2Fcss-diner-ptbr%2F";
+      var url = "https://www.facebook.com/sharer.php?u=https%3A%2F%2Fitxpertz.github.io%2Fcss-diner-ptbr%2F";
     } else if (type == "email") {
-      var url = "mailto:?subject=Veja+essa+ferramenta+CSS+Diner&body=E'+um+jogo+para+aprender+seletores+CSS.%0D%0A%0D%0AVoce+pode+testar+em+at+http://itxpertz.github.io/css-diner-ptbr";
+      var url = "mailto:?subject=Veja+essa+ferramenta+Restaurante+CSS&body=Um+jogo+para+aprender+seletores+CSS.%0D%0A%0D%0AVoce+pode+testar+em+at+http://itxpertz.github.io/css-diner-ptbr";
     }
 
     PopupCenter(url, "title", 600, 450);
