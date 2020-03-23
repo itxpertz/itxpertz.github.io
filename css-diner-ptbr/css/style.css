@@ -360,7 +360,7 @@ caixa:before {
 }
 
 .editor input.input-strobe {
-  background: rgba(62,203,255,.3);
+  background: rgba(251, 255, 40, 0.733);
   -webkit-animation: input .5s infinite;
   -moz-animation: input .5s infinite;
 
@@ -782,25 +782,33 @@ prato laranja {
 }
 
 prato tomate:last-child,
-prato laranja:last-child {
+prato laranja:last-child,
+caixa tomate:last-child,
+caixa laranja:last-child {
   z-index: 300;
 }
 
 prato tomate:nth-last-child(2),
-prato laranja:nth-last-child(2) {
+prato laranja:nth-last-child(2),
+caixa tomate:nth-last-child(2),
+caixa laranja:nth-last-child(2) {
   top: -25px;
   z-index: 400;
 }
 
 prato tomate:nth-last-child(3),
-prato laranja:nth-last-child(3)
+prato laranja:nth-last-child(3),
+caixa tomate:nth-last-child(3),
+caixa laranja:nth-last-child(3)
 {
   top: -65px;
   z-index: 500;
 }
 
 prato tomate:nth-last-child(4),
-prato laranja:nth-last-child(4)
+prato laranja:nth-last-child(4),
+caixa tomate:nth-last-child(4),
+caixa laranja:nth-last-child(4)
 {
   top: -105px;
   z-index: 600;
@@ -890,7 +898,7 @@ prato laranja:nth-last-child(4)
 
 .order {
   color: rgb(251, 255, 0);
-  font-size: 45px;
+  font-size: 25px;
   margin: 0;
   font-weight: 400;
   text-align: center;
@@ -905,7 +913,6 @@ prato laranja:nth-last-child(4)
   text-align: center;
   margin-top: 35px;
   padding: 20px 0;
-  w-idth: 725px;
   width: 100%;
   color: rgba(255,255,255,.3);
   font-size: 15px;
