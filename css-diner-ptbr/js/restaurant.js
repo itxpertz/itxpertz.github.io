@@ -212,7 +212,7 @@ function buildLevelmenu(){
   for(var i = 0; i < levels.length; i++){
     var level = levels[i];
     var item = document.createElement("a");
-    $(item).html("<span class='checkmark'></span><span class='level-number'>" + (i+1) + "</span>" + level.syntax);
+    $(item).html("<span class='checkmark'></span><span class='level-number'>" + (i+1) + "</span>" + level.syntaxMenu);
     $(".level-menu .levels").append(item);
 
     if(checkCompleted(i)){

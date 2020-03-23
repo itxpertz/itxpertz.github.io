@@ -5,6 +5,7 @@ var levels = [
     selectorName : "Seletor de tipo ou tag",
     helpTitle : "Selecionando elementos pelo seu tipo",
     syntax : "A",
+    syntaxMenu : "A",
     help : "Seleciona todos os elementos do tipo <strong>A</strong>. <br/><br/>'Tipo' se refere ao tipo de TAG, então <tag>div</tag>, <tag>p</tag> e <tag>ul</tag> são exemplos de tipos diferentes.",
     examples : [
       '<strong>div</strong> seleciona todos os elementos <tag>div</tag>',
@@ -22,6 +23,7 @@ var levels = [
     selectorName : "Seletor de tipo ou tag",
     helpTitle : "Seleciona os elementos pelo seu tipo",
     syntax : "A",
+    syntaxMenu : "A",
     help : "Seleciona todos os elementos do tipo <strong>A</strong>. 'Tipo' se refere ao tipo de TAG, então <tag>div</tag>, <tag>p</tag> e <tag>ul</tag> são exemplos de tipos diferentes.",
     examples : [
       '<strong>div</strong> seleciona todos os elementos <tag>div</tag>',
@@ -40,6 +42,8 @@ var levels = [
     selectorName: "Seletor de ID",
     helpTitle: "Seleciona elementos pelo seu ID",
     syntax: "#id",
+    syntaxMenu: "#id",
+    help : 'Seleciona um elemento com um <strong>id</strong> específico. Você também pode combinar o seletor e ID com o seletor de tipo.',
     help : 'Seleciona um elemento com um <strong>id</strong> específico. Você também pode combinar o seletor e ID com o seletor de tipo.',
     examples : [
       '<strong>#legal</strong> seleciona qualquer elemento com <strong>id="legal"</strong>',
@@ -58,6 +62,8 @@ var levels = [
     selectorName : "Seletor de filhos (descendentes)",
     helpTitle: "Seleciona um elemento dentro de outro elemento",
     syntax: "A&nbsp;&nbsp;B",
+    syntaxMenu: "A&nbsp;&nbsp;B",
+    help : "Seleciona todos <strong>B</strong> dentro de <strong>A</strong>. <br/> <strong>B</strong> é chamado de descendente (ou filho) porque está dentro de outro elemento.",
     help : "Seleciona todos <strong>B</strong> dentro de <strong>A</strong>. <br/> <strong>B</strong> é chamado de descendente (ou filho) porque está dentro de outro elemento.",
     examples : [
       '<strong>p&nbsp;&nbsp;strong</strong> seleciona todos elementos <tag>strong</tag> que estão dentro de qualquer elemento <tag>p</tag>',
@@ -78,6 +84,7 @@ var levels = [
     selectorName: "Combinação de seletores (parte 1)",
     helpTitle: "Combinando os seletores de ID e descendente",
     syntax: "#id&nbsp;&nbsp;A",
+    syntaxMenu: "#id&nbsp;&nbsp;A",
     help : 'Você pode combinar qualquer seletor com o seletor de descendência.',
     examples : [
       '<strong>#legal&nbsp;span</strong> seleciona todos elementos <tag>span</tag> que estão dentro de elemntos com <strong>id="legal"</strong>',
@@ -102,6 +109,7 @@ var levels = [
     selectorName: "Seletor de Classe",
     helpTitle: "Seleciona elementos pela sua classe",
     syntax: ".nomeDaClasse",
+    syntaxMenu: ".nomeDaClasse",
     help : 'O seletor de classe pega todos os elementos que contenham aquela classe. Elementos somente podem ter um ID, mas podem ter muitas classes.',
     examples : [
       '<strong>.grande</strong> seleciona todos os elementos com <strong>class="grande"</strong>'
@@ -122,6 +130,7 @@ var levels = [
     selectorName: "Combinação de seletores (parte 2)",
     helpTitle: "Combinando o seletor de Classe com Seletores de Tipo",
     syntax: "A.className",
+    syntaxMenu: "A.className",
     help : 'Você pode combinar o seletor de classe com outros seletores, como o seletor de tipo/tag por exemplo.',
     examples : [
       '<strong>ul.importante</strong> seleciona todos elementos <tag>ul</tag>que contenham <strong>class="importante"</strong>',
@@ -147,6 +156,7 @@ var levels = [
     selectorName : "Combinando seletores e classes em níveis",
     helpTitle: "Combinando o seletores de Classe com Seletores de Tipo em camadas",
     syntax: "A B.classe",
+    syntaxMenu: "A B.classe",
     help : 'Combine o que você aprendeu nos últimos níveis para resolver esse!',
     selector : "caixa laranja.pequeno",
     boardMarkup : `
@@ -171,6 +181,7 @@ var levels = [
     selectorName : "Operador de Combinação (Virgula)",
     helpTitle: "Combine seletores com virgulas!",
     syntax : "A, B",
+    syntaxMenu : "A, B",
     help : 'A virgula permite combinar e selecionar ambos elementos <strong>A</strong> e <strong>B</strong>. Você pode combinar qualquer seletor dessa forma e pode especificar mais do que dois inclusive.',
     examples: [
       '<strong>p, .legal</strong> seleciona todos os elementos <tag>p</tag> e também todos elementos com <strong>class="legal"</strong>',
@@ -199,6 +210,7 @@ var levels = [
     selectorName:  "O seletor universal (*)",
     helpTitle: "Você pode selecionar tudo!",
     syntax : "*",
+    syntaxMenu : "*",
     help : 'Com <strong>*</strong> você pode selecionar todos os elementos (seletor universal)!',
     examples : [
       '<strong>p *</strong> selecione todos elemntos que estiverem dentro de elementos <tag>p</tag>.',
@@ -221,6 +233,7 @@ var levels = [
     doThis : "Selecione tudo dentro de pratos",
     selectorName: "Combinação de seletores (parte 3)",
     syntax : "A&nbsp;&nbsp;*",
+    syntaxMenu : "A&nbsp;&nbsp;*",
     helpTitle: "Combinando outro seletor com o seletor universal",
     help : 'Esta regra acima seleciona tudo dentro de um elemento <strong>A</strong>.',
     examples : [
@@ -246,6 +259,7 @@ var levels = [
     selectorName: "Seletor de Irmão do Lado (Adjacente)",
     helpTitle: "Seleciona um elemento que está diretamente após um elemento",
     syntax : "A + B",
+    syntaxMenu : "A + B",
     help : "Esta regra acima seleciona todos elementos <strong>B</strong>que sucedem elementos <strong>A</strong>. Elementos que sucedem outros são chamados de irmãos (siblings).",
     examples : [
       '<strong>p + .intro</strong> seleciona todos elementos com <strong>class="intro"</strong> que está diretamente após um elemento <tag>p</tag>',
@@ -270,6 +284,7 @@ var levels = [
     selectorName: "Seletor de irmãos seguidores (General Sibling)",
     helpTitle: "Seleciona elementos que de um tipo que aparecem no mesmo nível, porém após um outro elemento",
     syntax: "A ~ B",
+    syntaxMenu: "A ~ B",
     help : "Você pode selecionar todos os irmãos que são adjacentes a um elemento. É semelhante ao seletor adjacente <strong>A + B</strong>, exceto que pega TODOS os próximos elementos, não apenas o próximo.",
     examples : [
       '<strong>A ~ B</strong> seleciona todos os elementos <strong>B</strong> que seguem um elemento <strong>A</strong>'
@@ -297,6 +312,7 @@ var levels = [
     selectorName: "Seletor de filhos",
     helpTitle: "Seleciona os filhos de um elemento que são de um determinado tipo",
     syntax: "A > B",
+    syntaxMenu: "A > B",
     help : "Você pode selecionar elementos que são filhos diretos de outro elemento. Um elemento filho é um elemento que está dentro de outro. <br><br>Elementos que estão em um nivel ainda maior dentro do elemento são c hamados de descendentes.",
     examples : [
       '<strong>A > B</strong> selects all <strong>B</strong> that are a direct children <strong>A</strong>'
@@ -322,6 +338,7 @@ var levels = [
     selectorName: "Seletor de filhos (2)",
     helpTitle: "Seleciona todos os filhos de um elemento que são de um determinado tipo",
     syntax: "A > B",
+    syntaxMenu: "A > B",
     help : "Veja que o mesmo seletor atua sobre todos os filhos de um mesmo tipo que estejam dentro de outro elemento.",
     examples : [
       '<strong>A > B</strong> selects all <strong>B</strong> that are a direct children <strong>A</strong>'
@@ -349,6 +366,7 @@ var levels = [
     selectorName: "Pseudo seletor de primeiro filho",
     helpTitle: "Seleciona a primeira ocorrência (primeiro filho) dentro de outro elemento",
     syntax: ":first-child<br/>A:first-child<br/>A B:first-child",
+    syntaxMenu: ":first-child",
     
     help : "É possível selecionar somente o primeiro filho de um elemento usando esse pseudo-seletor. Você pode combinar esse pseudo-seletor com outros seletores.",
     examples : [
@@ -374,6 +392,7 @@ var levels = [
     selectorName: "Pseudo-selector para filhos únicos",
     helpTitle: "Seleciona um elementos que são filhos únicos dentro de um outro elemento, isto é, que não tem irmãos.",
     syntax: ":only-child<br/>A:only-child<br/>A B:only-child",
+    syntaxMenu: ":only-child",
     help : "Com ele você pode selecionar qualquer elemento que for o único dentro de outro elemento.",
     examples : [
       '<strong>:only-child</strong> seleciona todos os elementos que são filhos únicos dentro de outros elementos.',
@@ -404,6 +423,7 @@ var levels = [
     selectorName: "Pseudo-selector para filhos únicos (2)",
     helpTitle: "Seleciona um elementos que são filhos únicos dentro de um outro elemento, isto é, que não tem irmãos.",
     syntax: ":only-child<br/>A:only-child<br/>A B:only-child",
+    syntaxMenu: ":only-child",
     help : "Com ele você pode selecionar qualquer elemento que for o único dentro de outro elemento.",
     examples : [
       '<strong>:only-child</strong> seleciona todos os elementos que são filhos únicos dentro de outros elementos.',
@@ -434,6 +454,7 @@ var levels = [
     selectorName: "Pseudo-selector para filhos únicos (3)",
     helpTitle: "Seleciona um elementos que são filhos únicos dentro de um outro elemento, isto é, que não tem irmãos.",
     syntax: ":only-child<br/>A:only-child<br/>A B:only-child",
+    syntaxMenu: ":only-child",
     help : "Com ele você pode selecionar qualquer elemento que for o único dentro de outro elemento.",
     examples : [
       '<strong>:only-child</strong> seleciona todos os elementos que são filhos únicos dentro de outros elementos.',
@@ -464,6 +485,7 @@ var levels = [
     selectorName: "Pseudo-selector de último filho",
     helpTitle: "Seleciona os últimos filhos dentro de qualquer outro elemento",
     syntax: ":last-child",
+    syntaxMenu: ":last-child",
     help : "Usamos esse seletor para pegar um elemento que é o último dentrode outro elemento. <br><br><strong>Pro Tip &rarr;</strong> Nos casos onde só existe um único elemento, este será o <strong>:first-child</strong>, <strong>:last-child</strong> e <strong>:only-child</strong> ao mesmo tempo!",
     examples : [
       '<strong>:last-child</strong> selects all last-child elements.',
@@ -488,6 +510,7 @@ var levels = [
     selectorName: "Pseudo-selector de último filho (2)",
     helpTitle: "Combinando classes com o seletor de último filho",
     syntax: ".classe:last-child",
+    syntaxMenu: ".classe:last-child",
     help : "Usamos esse seletor para pegar um elemento que é o último dentrode outro elemento. <br><br><strong>Pro Tip &rarr;</strong> Nos casos onde só existe um único elemento, este será o <strong>:first-child</strong>, <strong>:last-child</strong> e <strong>:only-child</strong> ao mesmo tempo!",
     examples : [
       '<strong>.novo:last-child</strong> seleciona o último filho de todos os itens que tem a classe <strong>novo</strong> aplicada.',
@@ -511,6 +534,7 @@ var levels = [
     selectorName: "Pseudo-seletor de N-ésimo Filho",
     helpTitle: "Seleciona um elemento pela sua ordem em outro elemento",
     syntax: ":nth-child(número)",
+    syntaxMenu: ":nth-child(número)",
     help : "Seleciona o elemento filho com a posição <strong>número</strong> (Ex: 1º, 2º, 3º, 12º etc.).",
     examples : [
       '<strong>:nth-child(8)</strong> seleciona todos os elementos que são filhos que estiverem na 8ª posição.',
@@ -532,6 +556,7 @@ var levels = [
     selectorName: "Pseudo-seletor de N-ésimo Filho",
     helpTitle: "Seleciona um elemento pela sua ordem em outro elemento",
     syntax: "A&nbsp;&nbsp;:nth-child(número)<br/>A:nth-child(número)<br/>A B:nth-child(número)",
+    syntaxMenu: "A&nbsp;&nbsp;:nth-child(número)",
     help : "Seleciona o elemento filho com a posição <strong>número</strong> (Ex: 1º, 2º, 3º, 12º etc.).",
     examples : [
       '<strong>:nth-child(8)</strong> seleciona todos os elementos que são filhos que estiverem na 8ª posição.',
@@ -561,6 +586,7 @@ var levels = [
     selectorName: "Pseudo-seletor de N-ésimo Filho",
     helpTitle: "Seleciona um elemento pela sua ordem em outro elemento",
     syntax: "A B:nth-child(número)",
+    syntaxMenu: "A B:nth-child(número)",
     help : "Seleciona o elemento filho com a posição <strong>número</strong> (Ex: 1º, 2º, 3º, 12º etc.).",
     examples : [
       '<strong>:nth-child(8)</strong> seleciona todos os elementos que são filhos que estiverem na 8ª posição.',
@@ -593,6 +619,7 @@ var levels = [
     selectorName: "N-ésimo inverso pseudo-seletor",
     helpTitle: "Seleciona um elemento por sua ordem inversa dentro de outro elemento. Isto é, inicia de trás pra frente, onde o último é 1, o penúltino é 2 e assim por diante...",
     syntax: ":nth-last-child(número)",
+    syntaxMenu: ":nth-last-child(número)",
     help : "Conte de trás para frente os elementos que estão em cima da mesa...",
     examples : [
       '<strong>:nth-last-child(2)</strong> seleciona todos os penúltimos elementos filhos.'
@@ -613,6 +640,7 @@ var levels = [
     selectorName: "Combinando elementos com o pseudo-seletor para n-ésimo inverso",
     helpTitle: "Seleciona um elemento por sua ordem inversa dentro de outro elemento. Isto é, inicia de trás pra frente, onde o último é 1, o penúltino é 2 e assim por diante...",
     syntax: "A:nth-last-child(número)<br/>A B:nth-last-child(número)",
+    syntaxMenu: "A:nth-last-child(número)",
     help : "Verifique o elemento que precisa pegar e conte de trás para frente...",
     examples : [
       '<strong>p:nth-last-child(2)</strong> seleciona os penúltimos <tag>p</tag> elementos filhos.'
@@ -639,6 +667,7 @@ var levels = [
     selectorName: "Combinando elementos com o pseudo-seletor para n-ésimo inverso (2)",
     helpTitle: "Seleciona um elemento por sua ordem inversa dentro de outro elemento. Isto é, inicia de trás pra frente, onde o último é 1, o penúltino é 2 e assim por diante...",
     syntax: "A:nth-last-child(número)<br/>A B:nth-last-child(número)",
+    syntaxMenu: "A:nth-last-child(número)",
     help : "Verifique o elemento que precisa pegar e conte de trás para frente...",
     examples : [
       '<strong>p:nth-last-child(2)</strong> seleciona os penúltimos <tag>p</tag> elementos filhos.'
@@ -665,6 +694,7 @@ var levels = [
     selectorName: "Pseudo-seletor para o primeiro do tipo ",
     helpTitle: "Selecione o primeiro elemento de um tipo específico",
     syntax: ":first-of-type",
+    syntaxMenu: ":first-of-type",
     help : "Tente colocar somente o pseudo seletor nem neda mais...",
     examples : [
       '<strong>:first-of-type</strong> pega todas as primeiras ocorrências de todos os elementos.'
@@ -685,6 +715,7 @@ var levels = [
     selectorName: "Combinando o seletor de tipo e pseudo-seletor primeiro do tipo",
     helpTitle: "Selecione o primeiro elemento de um tipo e specífico",
     syntax: "A:first-of-type<br/>A B:first-of-type",
+    syntaxMenu: "A:first-of-type",
     help : "É semelhate ao nível anterior, mas agora só com tomates...",
     examples : [
       '<strong>p:first-of-type</strong> pega todas as primeiras ocorrências de <tag>p</tag>.'
@@ -704,6 +735,7 @@ var levels = [
     doThis: "Selecione todos os pratos pares",
     selectorName: "Pseudo-seletor para n-ésimo de um tipo",
     syntax: "A:nth-of-type(número ou odd ou even)",
+    syntaxMenu: "A:nth-of-type(número)",
     help: "Seleciona a N-ésima ocorrência de um elemento baseado em seu tipo. Também é possível utilizar a definição de ímpar (odd) ou par (even) como parâmetro.",
     examples: [
       '<strong>div:nth-of-type(2)</strong> seleciona soemnte a segunda ocorrência do elemento <tag>div</tag> da página.',
@@ -725,6 +757,7 @@ var levels = [
     doThis: "Selecione somente os pepinos pequenos",
     selectorName: "Pseudo-seletor para n-ésimo de um tipo com fórmula",
     syntax: ":nth-of-type(N+n)<br/>A:nth-of-type(N+n)<br/>A B:nth-of-type(N+n)",
+    syntaxMenu: ":nth-of-type(N+n)",
     help: "Esse pseudo-seletor pega cada N-ésino elemento, podendo iniciar a partir de uma posição especídfica.",
     examples: [
       '<strong>p:nth-of-type(2n+3)</strong> seleciona, a partir do 3º elemento, de dois em dois <tag>p</tag>.'
@@ -748,6 +781,7 @@ var levels = [
     selectorName: "Pseudo-seletor para único de um tipo",
     helpTitle: "Seleciona elementos que são os únicos dentro de um outro elemento",
     syntax: ":only-of-type",
+    syntaxMenu: ":only-of-type",
     help : "Seleciona somente um elemento se ele for o único dentro de seu elemento pai. <br/><br/> Veja que se você usar <strong>:only-of-type</strong> todos os elementos ao lado que são únicos dentro dos pratos serão selecionados.  ",
     examples : [
       '<strong>:only-of-type</strong> seleciona todos os elementos únicos dentro de todos os elementos.'
@@ -776,6 +810,7 @@ var levels = [
     selectorName: "Combinando com o pseudo-seletor único de um tipo",
     helpTitle: "É possivel combinar o seletor especificando exatamente qual é o tipo que se deseja o único",
     syntax: "A:only-of-type<br/>A B:only-of-type",
+    syntaxMenu: "A:only-of-type",
     help : "Seleciona somente o elemnto que for do tipo <strong>A</strong> e for único.",
     examples : [
       '<strong>p:only-of-type</strong> seleciona somente o sparágrafos que forem únicos dentro de outros elementos.'
@@ -800,6 +835,7 @@ var levels = [
     selectorName: "Pseudo-seletor para último de um tipo",
     helpTitle: "Seleciona a última ocorrência de qualquer elemento",
     syntax: ":last-of-type<br/>A:last-of-type<br/>A B:last-of-type",
+    syntaxMenu: ":last-of-type",
     help : `Seleciona a última ocorrência de um elemento que estiver dentro de outro. 
     <br/><br/><strong>Pro tip:</strong>
     <br/> <strong>1)</strong> Se não for especificado um tipo se aplica a todos.
@@ -826,6 +862,7 @@ var levels = [
     selectorName: "Pseudo-seletor de Vazios",
     helpTitle: "Seleciona os elementos que estão vazios, isto é, não tem filhos",
     syntax: ":empty<br/>A:empty<br/>A B:empty",
+    syntaxMenu: ":empty",
     help : "Este seletor também pode ser combinado com outros seletores de tipo e classe para filtrar os elementos.",
     examples : [
       '<strong>div:empty</strong> seleciona todas as <tag>div</tag> vazias.'
@@ -845,6 +882,7 @@ var levels = [
     selectorName: "Pseudo-seletor de negação",
     helpTitle: "Seleciona todos os elementos cuja negação do seletor dentro do parênteses se aplica",
     syntax: ":not(seletor)<br/>A:not(seletor)<br/>A B:not(seletor)",
+    syntaxMenu: ":not(seletor)",
     help : 'Você pode, por exemplo pegar todos os elemento que não são <tag>p</tag> por exemplo com <strong>:not(p)</strong>.',
     examples : [
       '<strong>:not(#chique)</strong> seleciona todos os pratos que não tem <strong>id="chique"</strong>.',
@@ -873,6 +911,7 @@ var levels = [
     helpTitle: "Seleciona todos elementos que tem um atributo específico",
     selector : "[for]",
     syntax: "[nome_do_atributo]",
+    syntaxMenu: "[atributo]",
     help : `Atributo é o parâmetro que aparece dentro de um elemnto HTML, por exemplo: <tag>span atributo="valor"</tag>. 
         <br/><br/> Lembre-se que este seletor, neste formato, basta apenas que exista o atributo, ele não olha para o valor dele.`,
     examples : [
@@ -892,6 +931,7 @@ var levels = [
     selectorName: "Combinação com o seletor de atributo",
     helpTitle: "Seleciona todos os elementos de um tipo que possuem um determinado atributo",
     syntax: "A[atributo]<br/>A B[atributo]",
+    syntaxMenu: "A[atributo]",
     help : "Combina o seletor de atributo com o outro seletor (como de tipo ou classe).",
     examples : [
       '<strong>a[href]</strong> seleciona todos os elementos de link <tag>a</tag> que tem o atributo <strong>href</strong> definido.',
@@ -912,6 +952,7 @@ var levels = [
     helpTitle: "Seleciona todos os elementos que tem um atributo com um determinado valor",
     doThis : "Selecione a caixa da Ana",
     syntax: '[attribute="value"]<br/>A[attribute="value"]<br/>A B[attribute="value"]',
+    syntaxMenu: '[attribute="value"]',
     help : "<strong>Importante:</strong> os seletores de atributo são case sensitive, isto é, diferenciam maiúsculas de minúsculas.",
     examples : [
       '<strong>input[type="checkbox"]</strong> seleciona todos os elementos <tag>input type="checkbox"</tag>'
@@ -930,6 +971,7 @@ var levels = [
     helpTitle: "Seleciona todos os elementos com valor de atributo que inicia com um determinado texto, podendo ser combinado com outros seletores",
     doThis : "Selecione os itens para os nomes que começam com 'Ri'",
     syntax: '[atributo^="textoInicial"]<br/>A[atributo^="textoInicial"]<br/>A B[atributo^="textoInicial"]',
+    syntaxMenu: '[atributo^="textoInicial"]',
     help : 'O valor também é case sensitive e se não tiver espaços, as "aspas" podem ser abstraídas.',
     examples : [
       '<strong>.brinquedo[cor^="ver"]</strong> seleciona elementos com a classe <strong>class="brinquedo"</strong> e que também contenha o atributo <strong>cor="verde"</strong> ou <strong>cor="vermelho"</strong> por exemplo.'
@@ -947,6 +989,7 @@ var levels = [
     selectorName: "Seletor de valor final de atributo (termina com texto)",
     helpTitle: "Seleciona todos os elementos com valor de atributo que finaliza com um determinado texto, podendo ser combinado com outros seletores",
     syntax: '[attribute$="value"]<br/>A[attribute$="value"]<br/>A B[attribute$="value"]',
+    syntaxMenu: '[attribute$="value"]',
     help : 'Muito útil para tags como img, por exemplo, ou outros atributos que seja possível verificar um padrão.',
     examples : [
       '<strong>img[src$=".jpg"]</strong> seleciona todos elementos de imagem que apresentam arquivos <strong>.jpg</strong>.',
@@ -966,6 +1009,7 @@ var levels = [
     selectorName: "Seletor de valor de atributo com padrão no meio (que contém um texto)",
     helpTitle: "Seleciona todos os elementos com atributos que contenham caracteres específicos",
     syntax: '[atribute*="valor"]<br/>A[atribute*="valor"]',
+    syntaxMenu: '[atribute*="valor"]',
     selector : '[for*="li"]',
     help : 'Este é um seletor útil caso possa identificar um padrão comum em atributos como <strong>class</strong>, <strong>href</strong> ou <strong>src</strong>, por exemplo.',
     examples : [
