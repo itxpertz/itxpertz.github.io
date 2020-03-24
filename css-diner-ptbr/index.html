@@ -1,187 +1,208 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Restaurante CSS - Delicie-se com Seletores CSS!</title>
-    <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/levels.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/restaurant.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/jquery.mCustomScrollbar.min.js"></script>
 
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link href='https://fonts.googleapis.com/css?family=Exo+2:200,400,600,400italic,600italic' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
-    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" type="text/css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<head>
+  <title>Restaurante CSS - Delicie-se com Seletores CSS!</title>
 
-    <meta property="og:url"           content="http://itxpertz.github.io/css-diner-ptbr/index.html" />
-    <meta property="og:image" content="http://itxpertz.github.io/css-diner-ptbr/images/fb-share.jpg"/>
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Restaurante CSS" />
-    <meta property="og:description"   content="Um jogo para ajudar você a praticar o uso de seletores CSS." />
-    <meta property="og:site_name"     content="Restaurante CSS"/>
-  </head>
+ 
 
-  <body>
-    <div class="left-col">
+  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/levels.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/restaurant.js" type="text/javascript" charset="utf-8"></script>
+  <script src="js/jquery.mCustomScrollbar.min.js"></script>
 
-      <header>
-        
-        Restaurante CSS 
-        <div class="logo">
-          <prato><tomate /></prato>
-        </div>
-        
-        <img class="flag">
-      
-        <span class="share-menu">
-          
-          Compartilhe
-          <a class="share-twitter" type="twitter" href="#"></a>
-          <a class="share-facebook" type="facebook" href="#"></a>
-          <a class="share-email" type="email" href="#"></a>
-        </span>
-      </header>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link href='https://fonts.googleapis.com/css?family=Exo+2:200,400,600,400italic,600italic' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" type="text/css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 
-      <h2 class="order"></h2>
+  <meta property="og:url" content="http://itxpertz.github.io/css-diner-ptbr/index.html" />
+  <meta property="og:image" content="http://itxpertz.github.io/css-diner-ptbr/images/fb-share.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Restaurante CSS" />
+  <meta property="og:description" content="Um jogo para ajudar você a praticar o uso de seletores CSS." />
+  <meta property="og:site_name" content="Restaurante CSS" />
+</head>
 
-      <div class="note">
-        <h3>Você consegue!</h3>
-        <p>
-          Aqui você vai aprender sobre Seletores CSS!
-        </p>
-        <p>  
-          Seletores são a forma de que CSS pega um elemento HTML para aplicar um estilo.
-        </p>
+<body>
+  <div class="left-col">
 
-        <h4>Por exemplo... a regra abaixo se utiliza de um seletor de tipo, você sabia?  </h4>
+    <header>
 
-        <pre>
+      Restaurante CSS
+      <div class="logo">
+        <prato>
+          <tomate />
+        </prato>
+      </div>
+
+      <img class="flag">
+
+      <span class="share-menu">
+
+        Compartilhe
+        <a class="share-twitter" type="twitter" href="#"></a>
+        <a class="share-facebook" type="facebook" href="#"></a>
+        <a class="share-email" type="email" href="#"></a>
+      </span>
+    </header>
+
+    <h2 class="order"></h2>
+
+    <div class="note">
+      <h3>Você consegue!</h3>
+      <p>
+        Aqui você vai aprender sobre Seletores CSS!
+      </p>
+      <p>
+        Seletores são a forma de que CSS pega um elemento HTML para aplicar um estilo.
+      </p>
+
+      <h4>Por exemplo... a regra abaixo se utiliza de um seletor de tipo, você sabia? </h4>
+
+      <pre>
 p {
    color: red;
 }</pre>
 
-        <p>
-          Aqui, o "p" é um seletor (seleciona todos os elementos &lt;p&gt;) e aplica um estilo onde muda a cor de letra para vermelho.
-        </p>
-        <p>
-          Para jogar, digite o Seletor esperado na area esquerda abaixo, onde tem um editor piscante, para selecionar corretamente os itens que estão sobre a mesa do restaurante. Se você acertar, você avançará de nível.
-        </p>
-        <p>
-          Passe o mouse por sobre os itens na mesa para ver a marcação HTML referente na parte direita (Visualizador de HTML).
-        </p>
-        <p>
-          No Visualizador de HTML você verá a estrutura que representa a mesa acima! &rarr;
-        </p>
-        <a class="note-toggle" href="#">Ok, entendi!</a>
+      <p>
+        Aqui, o "p" é um seletor (seleciona todos os elementos &lt;p&gt;) e aplica um estilo onde muda a cor de letra
+        para vermelho.
+      </p>
+      <p>
+        Para jogar, digite o Seletor esperado na area esquerda abaixo, onde tem um editor piscante, para selecionar
+        corretamente os itens que estão sobre a mesa do restaurante. Se você acertar, você avançará de nível.
+      </p>
+      <p>
+        Passe o mouse por sobre os itens na mesa para ver a marcação HTML referente na parte direita (Visualizador de
+        HTML).
+      </p>
+      <p>
+        No Visualizador de HTML você verá a estrutura que representa a mesa acima! &rarr;
+      </p>
+      <a class="note-toggle" href="#">Ok, entendi!</a>
+    </div>
+
+    <a class="note-toggle" href="#">Estou travado! Me ajuda!</a>
+
+    <div class="game-wrapper">
+      <div class="mesa-wrapper">
+        <div class="mesa-surface"></div>
+        <div class="nametags"></div>
+        <div class="mesa"></div>
       </div>
-
-      <a class="note-toggle" href="#">Estou travado! Me ajuda!</a>
-
-      <div class="game-wrapper">
-        <div class="mesa-wrapper">
-          <div class="mesa-surface"></div>
-          <div class="nametags"></div>
-          <div class="mesa"></div>
-        </div>
-        <div class="mesa-edge">
-          <div class="mesa-leg"></div>
-          <div class="mesa-leg"></div>
-        </div>
+      <div class="mesa-edge">
+        <div class="mesa-leg"></div>
+        <div class="mesa-leg"></div>
       </div>
+    </div>
 
-      <div class="editor">
+    <div class="editor">
 
-        <div class="editor-pane">
-          <div class="input-header">
-            <div class="file-name">style.css</div> Editor CSS
+      <div class="editor-pane">
+        <div class="input-header">
+          <div class="file-name">style.css</div> Editor CSS
+        </div>
+        <div class="file-window css-view">
+          <div class="line-numbers">
+            1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10<br />11<br />12<br />13<br />14<br />15<br />16<br />17<br />18<br />19<br />20
           </div>
-          <div class="file-window css-view">
-            <div class="line-numbers">
-              1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20
-            </div>
-              <input class="input-strobe" type="text" placeholder="Escreva aqui o Seletor CSS"/><span class="plus">+</span><div class="enter-button">enter</div>
-            <div>
-            {<br/>
-            /* Outros estilos iriam aqui. */<br/>
+          <input class="input-strobe" type="text" placeholder="Escreva aqui o Seletor CSS" /><span class="plus">+</span>
+          <div class="enter-button">enter</div>
+          <div>
+            {<br />
+            /* Outros estilos iriam aqui. */<br />
             }
-            </div>
-            <div class="help">
-              <br/>
-              /* <br/>
-              Digite um numero de 1 a 32 para mudar o nível.<br/>
-              Ex &rarr; "5" para nível 5 <br/>*/
-            </div>
           </div>
-        </div>
-
-        <div class="editor-pane html-view">
-          <div class="input-header">
-            <div class="file-name">mesa.html</div>
-            Código HTML
-          </div>
-          <div class="file-window">
-            <div class="line-numbers">1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20</div>
-            <div class="markup"></div>
+          <div class="help">
+            <br />
+            /* <br />
+            Digite um numero de 1 a 32 para mudar o nível.<br />
+            Ex &rarr; "5" para nível 5 <br />*/
           </div>
         </div>
       </div>
 
-      <div class="what-is-this">
-        <p>
-          Baseado na ótima ferramenta <a href="http://flukeout.github.io/">CSS Diner</a> criada por  <a href="http://www.twitter.com/flukeout">@flukeout</a> <br/>
-          Tradução e ajustes por <a href="http://www.twitter.com/itxpertzbr">@itxpertzbr</a>  &mdash; mande uma mensagem! 
-          
-        </p>
-        <p>
-          Tem contribuições ou perguntas? <br/>Por favor envie uma nota ou isssue através do <a href="https://github.com/joelsodias/css-diner-ptbr/issues">repositório no Github</a>.
-        </p>
-      </div>
-
-      <div class="helper"><!-- This is the popup that floats over mesa elements --></div>
-
-    </div><!-- /left-col -->
-
-    <div class="right-col">
-
-      <div class="help-wrapper">
-        
-        <h1 class="level-header">
-          <span class="level-text"></span>
-          <span class="checkmark"></span>
-        </h1>
-
-        <div class="level-nav">
-          <a class="previous" href="#"></a>
-          <a class="next" href="#"></a>
+      <div class="editor-pane html-view">
+        <div class="input-header">
+          <div class="file-name">mesa.html</div>
+          Código HTML
         </div>
-
-        <div class="level-progress"><div class="progress"></div></div>
-      
-        <div class="display-help">
-          <h3 class="selector-name"></h3>
-          <h2 class="title"></h2>
-          <h4 class="titles">Sintaxe:</h4>
-          <h3 class="syntax"></h3>
-          <h4 class="titles">Dica:</h4>
-          <div class="hint"></div>
-          <h4 class="titles">Exemplos:</h4>
-          <div class="examples"></div>
+        <div class="file-window">
+          <div class="line-numbers">
+            1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10<br />11<br />12<br />13<br />14<br />15<br />16<br />17<br />18<br />19<br />20
+          </div>
+          <div class="markup"></div>
         </div>
       </div>
+    </div>
 
-      <div class="level-menu">
-        <h2>Choose a level</h2>
-        <div class="levels"><!-- level links are inserted here--></div>
-        <a class="reset-progress" href="#">Reiniciar Progresso</a>
+    <div class="what-is-this">
+      <p>
+        Baseado na ótima ferramenta <a href="http://flukeout.github.io/">CSS Diner</a> criada por <a
+          href="http://www.twitter.com/flukeout">@flukeout</a> <br />
+        Tradução e ajustes por <a href="http://www.twitter.com/itxpertzbr">@itxpertzbr</a> &mdash; mande uma mensagem!
+
+      </p>
+      <p>
+        Tem contribuições ou perguntas? <br />Por favor envie uma nota ou isssue através do <a
+          href="https://github.com/joelsodias/css-diner-ptbr/issues">repositório no Github</a>.
+      </p>
+    </div>
+
+    <div class="helper">
+      <!-- This is the popup that floats over mesa elements -->
+    </div>
+
+  </div><!-- /left-col -->
+
+  <div class="right-col">
+
+    <div class="help-wrapper">
+
+      <h1 class="level-header">
+        <span class="level-text"></span>
+        <span class="checkmark"></span>
+      </h1>
+
+      <div class="level-nav">
+        <a class="previous" href="#"></a>
+        <a class="next" href="#"></a>
       </div>
 
-      <div class="level-menu-toggle-wrapper">
-        <div class="level-menu-toggle"></div>
+      <div class="level-progress">
+        <div class="progress"></div>
       </div>
 
-    </div><!-- /right-col -->
+      <div class="display-help">
+        <h3 class="selector-name"></h3>
+        <h2 class="title"></h2>
+        <h4 class="titles">Sintaxe:</h4>
+        <h3 class="syntax"></h3>
+        <h4 class="titles">Dica:</h4>
+        <div class="hint"></div>
+        <h4 class="titles">Exemplos:</h4>
+        <div class="examples"></div>
+      </div>
+    </div>
 
-  
+    <div class="level-menu">
+      <h2>Choose a level</h2>
+      <div class="levels">
+        <!-- level links are inserted here-->
+      </div>
+      <a class="reset-progress" href="#">Reiniciar Progresso</a>
+    </div>
 
-  </body>
+    <div class="level-menu-toggle-wrapper">
+      <div class="level-menu-toggle"></div>
+    </div>
+
+  </div><!-- /right-col -->
+
+
+
+</body>
+
 </html>
