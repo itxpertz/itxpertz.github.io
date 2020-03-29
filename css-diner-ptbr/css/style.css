@@ -179,7 +179,7 @@ header {
   right: 20px;
 }
 
-laranja, tomate, pepino, caixa, prato {
+laranja, tomate, pepino, cenoura, caixa, prato {
   transition: transform ease-out .2s;
 }
 
@@ -397,7 +397,7 @@ laranja {
   border-color: #bd6e07;
 }
 
-laranja,tomate,pepino {
+laranja,tomate,pepino, cenoura {
   box-shadow: 0px 5px 0px rgba(0,0,0,.2);
   display: inline-block;
   margin: 0 10px;
@@ -406,21 +406,7 @@ laranja,tomate,pepino {
 
 
 
-carrot {
-  background: orange;
-  width: 60px;
-  height: 60px;
-  display: inline-block;
-  box-shadow: 0px 5px 0px rgba(0,0,0,.15);
 
-  background: #f9e4ac;
-  border-style: solid;
-  border-color: #88611e;
-  border-width: 2px 2px 12px 2px;
-  -webkit-border-radius: 15px 15px 6px 6px;
-  border-radius: 15px 15px 6px 6px;
-  margin: 20px 10px;
-}
 
 
 laranja,tomate {
@@ -453,7 +439,18 @@ pepino {
   margin: 20px 10px;
 }
 
-pepino.pequeno {
+cenoura {
+  background: orange;
+  width: 25px;
+  border-radius: 30px;
+  display: inline-block;
+  position: relative;
+  border: solid 2px orangered;
+  border-width: 2px 2px 9px 2px;
+  margin: 20px 10px;
+}
+
+pepino.pequeno, cenoura.pequeno {
   height: 40px;
   width: 18px;
   border-width: 1px 2px 6px 2px;
@@ -507,7 +504,9 @@ caixa > .pequeno:only-child {
 }
 
 prato > pepino:only-child,
-caixa > pepino:only-child {
+caixa > pepino:only-child,
+prato > cenoura:only-child,
+caixa > cenoura:only-child {
   top: calc(50% - 40px);
   left: calc(50% - 10px);
   z-index: 99999;
@@ -516,7 +515,9 @@ caixa > pepino:only-child {
 }
 
 prato > pepino.pequeno:only-child,
-caixa > pepino.pequeno:only-child {
+caixa > pepino.pequeno:only-child,
+prato > cenoura.pequeno:only-child,
+caixa > cenoura.pequeno:only-child  {
   top: calc(50% - 22px);
   left: calc(50% - 8px);
   z-index: 99999;

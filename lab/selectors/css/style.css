@@ -1,0 +1,95 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+ 
+body {
+  font-family: "Exo 2", "Lato", "Helvetica Neue", sans-serif; 
+  font-size: 12px;
+}
+
+
+
+aside {
+  height: 100%;
+  width: 380px;
+  position: fixed;
+  z-index: 1;
+  top:  0px;
+  left: 0px;
+  background-color:#800080;
+  overflow-x: hidden;
+  padding: 10px;
+}
+
+aside header {
+  width:400px;
+  margin:0px;
+
+}
+
+aside a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+aside a:hover {
+  color: #f1f1f1;
+}
+
+
+
+
+aside header h2 {
+   display:inline-block;
+   height:33px;
+   vertical-align:bottom;
+   line-height:40px; 
+   margin-left: 30px; 
+   color:white;
+   
+}
+
+aside .help {
+  padding:5px;
+  color:white;
+  margin-top:15px;
+  margin-bottom: 15px;
+}
+
+
+aside footer .logo {
+  b-order:1px solid white;
+  width: 90px;
+  height: 33px;
+  float:right;
+  background-color:#800080;
+  background-image: url("../images/itxpertz_logotext90x33.png");
+  background-position: right;
+  background-size: 90px;
+  background-repeat: no-repeat;
+}
+
+main {
+  margin-left: 400px; /* Same as the width of the sidenav */
+  font-size: 1.5em; /* Increased text to enable scrolling */
+ 
+}
+
+main header {
+   height:100px;
+   m-argin-left: 400px; 
+   b-ackground-color: azure;
+}
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+

@@ -1,0 +1,42 @@
+
+
+ tomate {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: orangered;
+  background-size: cover;
+  b-ackground-image: url("../images/tomate.png");
+}
+
+
+ main game {
+    height:300px;
+    margin:auto;
+    max-width:90%;
+    background-color: chocolate;
+    padding:20px;  
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  main game div {
+      border: 1px dotted white;
+      margin:5px;
+      min-height: 30px;
+      min-width: 30px;
+      max-width: 80%;
+      display:flex;
+      padding:10px;
+      justify-content: space-around;
+      align-items: center;
+      color:white;
+      font-weight: bolder;
+  }
+
+  
+
+
+ 
+   

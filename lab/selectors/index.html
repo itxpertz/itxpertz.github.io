@@ -10,86 +10,72 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        
-        <style>
-            * {
-                margin:0px;
-                padding:0px;
-            }
-             
-            body {
-              font-family: "Lato", sans-serif;
-              font-size: 12px;
-            }
-            
-            .sidenav {
-              height: 100%;
-              width: 300px;
-              position: fixed;
-              z-index: 1;
-              top:  0px;
-              left: 0;
-              background-color: darkslateblue;
-              overflow-x: hidden;
-              padding-top: 20px;
-            }
-            
-            .sidenav a {
-              padding: 6px 8px 6px 16px;
-              text-decoration: none;
-              font-size: 25px;
-              color: #818181;
-              display: block;
-            }
-            
-            .sidenav a:hover {
-              color: #f1f1f1;
-            }
-            
-            .main {
-              margin-left: 300px; /* Same as the width of the sidenav */
-              font-size: 1.5em; /* Increased text to enable scrolling */
-             
-            }
-            
-            @media screen and (max-height: 450px) {
-              .sidenav {padding-top: 15px;}
-              .sidenav a {font-size: 18px;}
-            }
+        <link rel="icon" type="image/png" href="../../favicon.png">
 
-            header {
-               height:100px;
-               margin-left: 300px; 
-               background-color: azure;
-            }
 
-            footer {
-              height:200px;
-              background-color: chocolate;  
-            }
-            </style>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/game.css">
+        <link rel="stylesheet" href="css/editor.css">
+        <link href='https://fonts.googleapis.com/css?family=Exo+2:200,400,600,400italic,600italic' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+      
+        <script src="../jquery/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/game.js" type="text/javascript" charset="utf-8"></script>
+
 
     </head>
     <body>
-       <header>
-            teste
-       </header>
-       <div class="sidenav">
        
-       </div>
-      
-      <div class="main">
-        <h2>Sidebar</h2>
-        <p>This sidebar is of full height (100%) and always shown.</p>
-        <p>Scroll down the page to see the result.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-      </div>
-       <footer>
+       <aside>
+          <header>
+          
+           <h2>Selector Lab!</h2>
+          </header> 
+          <div class="help">
+          <p>Use o editor abaixo para escrever o seletor que corresponde ao que foi solicitado na direita!</p>
+          </div>
+          <div class="editor">
 
-       </footer>
+            <div class="editor-pane">
+              <div class="input-header">
+                <div class="file-name">Editor CSS</div>
+              </div>
+              <div class="file-window css-view">
+                <div class="line-numbers">
+                  1<br />2<br />3<br />4<br />5<br />6
+                </div>
+                <input class="input-strobe" type="text" placeholder="Escreva aqui o Seletor CSS" /><span class="plus">+</span>
+                <div class="enter-button">enter</div>
+                <div>
+                  {<br />
+                    &nbsp;&nbsp;border:1px solid red;<br />
+                  }
+                </div>
+                </div>
+            </div>
+
+            
+          </div>
+        <footer>
+          <div class="logo"></div>
+        </footer>
+      </aside>
+      
+      <main>
+        <header>
+          teste
+        </header>
+        <game>
+           <div>A</div>
+           <div>A</div>
+           <tomate/> 
+         
+             
+        </game>  
+        <footer>
+
+        </footer>
+      <main>
+      
     </body>
 </html>
